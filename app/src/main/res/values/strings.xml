@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BTL</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="name">Họ và tên</string>
+    <string name="email">Email</string>
+    <string name="sdt">Số điện thoại</string>
+    <string name="diachi">Địa chỉ</string>
+    <string name="maloai">Mã loại</string>
+    <string name="tenloai">Tên loại</string>
+    <string name="masp">Mã sản phẩm</string>
+    <string name="tensp">Tên sản phẩm</string>
+    <string name="mota">Mô tả</string>
+    <string name="soluong">Số lượng</string>
+    <string name="gianhap">Giá nhập</string>
+    <string name="giaban">Giá bán</string>
+    <string name="anh">Ảnh sản phẩm</string>
+    <string name="key">Nhập từ khóa tìm kiếm</string>
+</resources>
