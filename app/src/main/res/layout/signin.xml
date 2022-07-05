@@ -1,134 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
     android:weightSum="4"
-    android:background="@color/colorBackground">
+    tools:context=".activity.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="50dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:fontFamily="@font/seg_ui_semibold"
-            android:text="ĐĂNG NHẬP"
             android:gravity="center"
+            android:text="ĐĂNG NHẬP"
             android:textColor="@color/colorText"
             android:textSize="30dp" />
     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edttendn"
-        android:hint="@string/username"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:drawableTint="@color/colorText"
-        app:startIconDrawable="@drawable/ic_user"
-        android:background="@drawable/edit_text_background">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtmk"
-        android:hint="@string/password"
-        android:paddingTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        app:startIconDrawable="@drawable/ic_password"
-        android:drawableTint="@color/colorText"
-       >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:password="true" />
-    </com.google.android.material.textfield.TextInputLayout>
-</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableTint="@color/colorText"
+            android:hint="@string/username"
+            app:startIconDrawable="@drawable/ic_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTenDNDangNhap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawableTint="@color/colorText"
+            android:hint="@string/password"
+            android:paddingTop="30dp"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtMKDangNhap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
         <CheckBox
+            android:id="@+id/cbHienMK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cbRemember"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:fontFamily="@font/seg_ui_semibold"
+            android:gravity="center"
             android:text="Hiển thị mật khẩu"
             android:textColor="@color/colorText"
-            android:textSize="17dp" />
+            android:textSize="16dp" />
+
         <TextView
+            android:id="@+id/tvQuenMK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvQuenMK"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:layout_marginRight="30dp"
             android:layout_marginLeft="8dp"
-            android:fontFamily="@font/seg_ui_semibold"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:gravity="center"
             android:text="QUÊN MẬT KHẨU"
             android:textColor="@color/colorText"
-            android:textSize="18dp" />
+            android:textSize="16dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
+
         <Button
+            android:id="@+id/btnDangNhapDN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnDangnhap"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:layout_marginLeft="120dp"
-            android:fontFamily="@font/seg_ui_semibold"
-            android:text="ĐĂNG NHẬP"
             android:background="@drawable/button_background"
-            android:textColor="@color/colorText"
-            android:textSize="20dp" />
+            android:fontFamily="@font/seg_ui_semibold"
+            android:gravity="center"
+            android:text="ĐĂNG NHẬP"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="15dp" />
     </LinearLayout>
+
     <LinearLayout
-        android:layout_marginBottom="26dp"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp">
+        android:layout_marginBottom="26dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorText"
-            android:textSize="18dp"
-            android:text="Bạn chưa có tài khoản?"
             android:fontFamily="@font/seg_ui_semibold"
-             />
+            android:text="Bạn chưa có tài khoản?"
+            android:textColor="@color/colorText"
+            android:textSize="18dp" />
+
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tvDangkyDN"
+            android:layout_width="102dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="ĐĂNG KÝ"
             android:textColor="@color/colorText"
             android:textSize="20dp"
-            android:layout_marginRight="30dp"
-            android:text="ĐĂNG KÝ"
-            android:fontFamily="@font/segoe_ui_bold"
-            android:layout_marginLeft="12dp"/>
+            android:textStyle="italic" />
     </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTitle"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorTitle"
+            android:src="@drawable/ic_back"
+            android:id="@+id/imgBackChiTietHD"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/colorTitle"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="CHI TIẾT HÓA ĐƠN"
+            android:textColor="@color/colorText"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:drawableStart="@drawable/ic_tenloai"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:text="Tên sản phẩm:"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="18dp" />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spTenSPChiTietHD"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/giaban"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingTop="10dp"
+                app:startIconDrawable="@drawable/ic_giaban"
+                android:drawableTint="@color/colorText"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtGiaBanChiTietHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/soluong"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingTop="10dp"
+                app:startIconDrawable="@drawable/ic_soluong"
+                android:drawableTint="@color/colorText"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtSoLuongChiTietHD"
+                    android:inputType="number"
+                    android:digits="0123456789"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:drawableStart="@drawable/ic_totalmoney"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:text="Thành tiền:"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:id="@+id/tvThanhTien"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:text="VNĐ"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="18dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnThemChiTietHD"
+                android:gravity="center"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:text="THÊM"
+                android:layout_marginLeft="135dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="15dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="#CDE0EF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:drawableStart="@drawable/ic_money"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:text="Tổng tiền:"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:id="@+id/tvTongTien"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:text="VNĐ"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lvChiTietHD"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

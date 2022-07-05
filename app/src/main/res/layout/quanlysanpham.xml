@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
     android:orientation="vertical"
-    android:weightSum="4"
-    tools:context=".MainActivity">
+    tools:context=".activity.Activity.QuanLySanPhamActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,11 +15,12 @@
         android:paddingBottom="10dp">
 
         <ImageButton
+            android:id="@+id/imgHomeQLSP"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@color/colorTitle"
             android:paddingLeft="10dp"
-            android:src="@drawable/ic_address" />
+            android:src="@drawable/ic_address" />/>
 
         <TextView
             android:layout_width="288dp"
@@ -34,79 +33,188 @@
             android:textColor="@color/colorText"
             android:textSize="22dp" />
 
-        <ImageButton
-            android:id="@+id/imgAdd"
-            android:layout_width="42dp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="15dp"
-            android:background="@color/colorTitle"
-            android:src="@drawable/ic_add" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/edtTuKhoa"
-            android:layout_width="303dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edit_text_background"
-            android:drawableTint="@color/colorText"
-            android:hint="@string/key"
-            android:textSize="20dp"
-            app:startIconDrawable="@drawable/ic_name" />
-
-        <ImageButton
-            android:id="@+id/imgTimKiem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/ic_search" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvSP"
-            android:layout_width="272dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/seg_ui_semibold"
-            android:text="Tên sản phẩm"
-            android:textColor="@color/colorText"
-            android:textSize="22dp" />
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:layout_marginRight="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/edtKeySP"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:completionThreshold="1"
+                android:background="@drawable/edit_text_background"
+                android:drawableTint="@color/colorText"
+                android:hint="@string/key"
+                android:textSize="20dp"
+                app:startIconDrawable="@drawable/ic_name" />
 
             <ImageButton
-                android:id="@+id/imgSua"
+                android:id="@+id/imgSearchSP"
                 android:layout_width="wrap_content"
-                android:layout_height="44dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/update" />
-
-            <ImageButton
-                android:id="@+id/imgXoa"
-                android:layout_width="46dp"
-                android:layout_height="44dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/delete"
-                android:layout_marginLeft="4dp"/>
+                android:src="@drawable/ic_search" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:drawableTint="@color/colorText"
+                android:hint="@string/tenloai"
+                android:paddingTop="10dp"
+                app:startIconDrawable="@drawable/ic_category">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTenLoaiQLSP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:drawableTint="@color/colorText"
+                android:hint="@string/tensp"
+                android:paddingTop="10dp"
+                app:startIconDrawable="@drawable/ic_tensp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTenSPQLSP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:drawableTint="@color/colorText"
+                android:hint="@string/soluong"
+                android:paddingTop="10dp"
+                app:startIconDrawable="@drawable/ic_soluong">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSoLuongQLSP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:digits="0123456789"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:drawableTint="@color/colorText"
+                android:hint="@string/gianhap"
+                android:paddingTop="10dp"
+                app:startIconDrawable="@drawable/ic_gianhap">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtGiaNhapQLSP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:digits="0123456789"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:drawableTint="@color/colorText"
+                android:hint="@string/giaban"
+                android:paddingTop="10dp"
+                app:startIconDrawable="@drawable/ic_giaban">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtGiaBanQLSP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:digits="0123456789"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnThemSP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:gravity="center"
+                android:text="THÊM"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btnSuaSP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:gravity="center"
+                android:text="Sửa"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btnXoaSP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:gravity="center"
+                android:text="XÓA"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lvqlsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.btl" >
+    package="com.example.btl">
 
     <application
         android:allowBackup="true"
@@ -8,16 +8,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BTL" >
+        android:theme="@style/Theme.BTL">
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+            android:name=".activity.DangNhapActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.Activity.NavigationMenuActivity" />
+        <activity android:name=".activity.Activity.NavigationNVActivity" />
+        <activity android:name=".activity.Activity.QuanLyHoaDonActivity" />
+        <activity android:name=".activity.Activity.ChiTietHoaDonActivity" />
+        <activity android:name=".activity.Activity.QuanLyNhanVienActivity" />
+        <activity android:name=".activity.Activity.QuanLySanPhamActivity"/>
+        <activity android:name=".activity.DangKyActivity" />
+        <activity android:name=".activity.ThongKeActivity" />
     </application>
 
 </manifest>

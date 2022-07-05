@@ -7,7 +7,7 @@
     android:background="@color/colorBackground"
     android:orientation="vertical"
     android:weightSum="4"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,8 @@
             android:layout_height="match_parent"
             android:background="@color/colorTitle"
             android:paddingLeft="10dp"
-            android:src="@drawable/ic_address" />
+            android:src="@drawable/ic_address"
+            android:id="@+id/imgHomeQLNV"/>
 
         <TextView
             android:layout_width="288dp"
@@ -34,13 +35,6 @@
             android:textColor="@color/colorText"
             android:textSize="22dp" />
 
-        <ImageButton
-            android:id="@+id/imgAdd"
-            android:layout_width="42dp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="15dp"
-            android:background="@color/colorTitle"
-            android:src="@drawable/ic_add" />
     </LinearLayout>
 
     <LinearLayout
@@ -49,9 +43,9 @@
         android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/edtTuKhoa"
-            android:layout_width="303dp"
+        <AutoCompleteTextView
+            android:id="@+id/edtKeyNV"
+            android:layout_width="290dp"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
@@ -62,51 +56,215 @@
             app:startIconDrawable="@drawable/ic_name" />
 
         <ImageButton
-            android:id="@+id/imgTimKiem"
+            android:id="@+id/imgSearchNV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_search" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            android:drawableStart="@drawable/ic_role"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="Quyền:"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textSize="16dp" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbQuyenQLNV"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quản lý"
+                android:id="@+id/rbQuanlyQLNV"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="16dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhân viên"
+                android:id="@+id/rbNhanvienQLNV"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="16dp"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:startIconDrawable="@drawable/ic_name"
+            android:drawableTint="@color/colorText"
+            android:background="@drawable/edit_text_background">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtHoTenQLNV"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:startIconDrawable="@drawable/ic_user"
+            android:drawableTint="@color/colorText"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtTenDNQLNV"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:startIconDrawable="@drawable/ic_password"
+            android:drawableTint="@color/colorText"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtMKQLNV"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingTop="10dp"
+            app:startIconDrawable="@drawable/ic_email"
+            android:drawableTint="@color/colorText"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtEmailQLNV"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sdt"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingTop="10dp"
+            app:startIconDrawable="@drawable/ic_phone"
+            android:drawableTint="@color/colorText"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtSDTQLNV"
+                android:maxLength="10"
+                android:inputType="number"
+                android:digits="0123456789"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/diachi"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingTop="10dp"
+            app:startIconDrawable="@drawable/ic_address"
+            android:drawableTint="@color/colorText"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtDiachiQLNV"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnThemNV"
+            android:gravity="center"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="THÊM"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="15dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSuaNV"
+            android:gravity="center"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="Sửa"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="15dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnXoaNV"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:text="XÓA"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvNV"
-            android:layout_width="272dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/seg_ui_semibold"
-            android:text="Tên nhân viên"
-            android:textColor="@color/colorText"
-            android:textSize="22dp" />
-
-        <LinearLayout
+        <ListView
+            android:id="@+id/lvqlnv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:layout_marginRight="10dp">
-
-            <ImageButton
-                android:id="@+id/imgSua"
-                android:layout_width="wrap_content"
-                android:layout_height="44dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/update" />
-
-            <ImageButton
-                android:id="@+id/imgXoa"
-                android:layout_width="46dp"
-                android:layout_height="44dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/delete"
-                android:layout_marginLeft="4dp"/>
-        </LinearLayout>
+            />
     </LinearLayout>
 
 </LinearLayout>

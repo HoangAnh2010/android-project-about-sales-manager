@@ -16,4 +16,6 @@
     <string name="giaban">Giá bán</string>
     <string name="anh">Ảnh sản phẩm</string>
     <string name="key">Nhập từ khóa tìm kiếm</string>
+    <string name="tenkhach">Tên khách hàng</string>
+    <string name="ngayban">Ngày bán</string>
 </resources>

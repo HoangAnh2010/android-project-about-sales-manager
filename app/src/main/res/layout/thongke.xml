@@ -7,7 +7,7 @@
     android:background="@color/colorBackground"
     android:orientation="vertical"
     android:weightSum="4"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@color/colorTitle"
-            android:src="@drawable/ic_menu" />
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_address"
+            android:id="@+id/imgHomeThongKe"/>
 
         <TextView
             android:layout_width="288dp"
@@ -42,7 +44,7 @@
         android:orientation="vertical">
 
         <RadioGroup
-            android:id="@+id/rdThongKe"
+            android:id="@+id/rbThongKe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -50,21 +52,16 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/rdBanChay"
+                android:id="@+id/rbBanChay"
                 android:textSize="20dp"
                 android:text="Sản phẩm bán chạy"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/rdTonKho"
+                android:id="@+id/rbTonKho"
                 android:textSize="20dp"
                 android:text="Sản phẩm tồn kho"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/rdGia"
-                android:textSize="20dp"
-                android:text="Top 5 sản phẩm giá rẻ"/>
+
         </RadioGroup>
 
     </LinearLayout>
@@ -76,11 +73,10 @@
         android:orientation="vertical">
 
         <ListView
-            android:id="@+id/lvSP"
+            android:id="@+id/lvThongKe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
             android:fontFamily="@font/seg_ui_semibold"
             android:textColor="@color/colorText"
             android:textSize="22dp" />

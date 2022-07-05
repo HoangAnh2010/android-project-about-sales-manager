@@ -7,23 +7,31 @@
         <entry key="..\:/Study/Android/BTL/app/src/main/res/drawable/button_background.xml" value="0.1" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/drawable/edit_text_background.xml" value="0.1" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/drawable/ic_logo_oriole_background.xml" value="0.1545" />
-        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/chitiethd.xml" value="0.259375" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/chitietnhanvien.xml" value="0.259375" />
-        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/chitietsp.xml" value="0.259375" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/chitietsp.xml" value="0.264" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/cthd.xml" value="0.259375" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/dongsp.xml" value="0.259375" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/hoadon.xml" value="0.259375" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/list_sanpham.xml" value="0.2453125" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/navigation_menu.xml" value="0.264" />
-        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/navigation_menu_nv.xml" value="0.14583333333333334" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/navigation_menu_nv.xml" value="0.264" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/nhanvien.xml" value="0.20380434782608695" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/quanlyhoadon.xml" value="0.259375" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/quanlyloaisp.xml" value="0.259375" />
-        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/quanlynhanvien.xml" value="0.259375" />
-        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/quanlysanpham.xml" value="0.264" />
-        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/signin.xml" value="0.2" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/quanlynhanvien.xml" value="0.264" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/quanlysanpham.xml" value="0.24912280701754386" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/sanpham.xml" value="0.14166666666666666" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/signin.xml" value="0.264" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/signup.xml" value="0.264" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/sualoaisp.xml" value="0.259375" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/suanhanvien.xml" value="0.259375" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/suasp.xml" value="0.259375" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/themloaisp.xml" value="0.259375" />
-        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/themnhanvien.xml" value="0.14583333333333334" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/themnhanvien.xml" value="0.264" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/themsp.xml" value="0.264" />
-        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/thongke.xml" value="0.259375" />
+        <entry key="..\:/Study/Android/BTL/app/src/main/res/layout/thongke.xml" value="0.264" />
         <entry key="..\:/Study/Android/BTL/app/src/main/res/menu/quanly.xml" value="0.259375" />
       </map>
     </option>

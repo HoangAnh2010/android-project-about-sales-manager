@@ -4,26 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
+    tools:context=".activity.MainActivity"
     android:orientation="vertical"
     android:weightSum="4"
     android:background="@color/colorBackground">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="30dp">
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back"
+            android:layout_marginLeft="20dp"
+            android:background="@color/colorBackground"
+            android:id="@+id/imgBackDangKy"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
             android:layout_marginRight="30dp"
             android:fontFamily="@font/seg_ui_semibold"
             android:text="ĐĂNG KÝ"
-            android:drawableStart="@drawable/ic_back"
             android:gravity="center"
             android:textColor="@color/colorText"
             android:textSize="30dp" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +43,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edtHoTen"
             android:hint="@string/name"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -42,13 +51,13 @@
             android:background="@drawable/edit_text_background">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/edtHoTenDangKy"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edtTenDN"
             android:hint="@string/username"
             android:paddingTop="10dp"
             android:layout_marginLeft="30dp"
@@ -58,12 +67,12 @@
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/edtTenDNDangKy"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edtMK"
             android:hint="@string/password"
             android:paddingTop="10dp"
             android:layout_marginLeft="30dp"
@@ -74,12 +83,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:password="true" />
+                android:id="@+id/edtMKDangKy"
+                android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edtEmail"
             android:hint="@string/email"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -89,13 +98,15 @@
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/edtEmailDangKy"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edtSDT"
             android:hint="@string/sdt"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:paddingTop="10dp"
@@ -104,12 +115,15 @@
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/edtSDTDangKy"
+                android:maxLength="10"
+                android:inputType="number"
+                android:digits="0123456789"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edtDiachi"
             android:hint="@string/diachi"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -119,7 +133,8 @@
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/edtDiachiDangKy"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <LinearLayout
@@ -137,20 +152,20 @@
             android:text="ĐĂNG KÝ"
             android:layout_marginLeft="50dp"
             android:background="@drawable/button_background"
-            android:textColor="@color/colorText"
-            android:textSize="20dp" />
+            android:textColor="@color/colorTextWhite"
+            android:textSize="15dp" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnHuy"
+            android:id="@+id/btnHuyDangKy"
             android:layout_marginTop="30dp"
             android:gravity="center"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="50dp"
             android:fontFamily="@font/seg_ui_semibold"
             android:text="HỦY"
             android:background="@drawable/button_background"
-            android:textColor="@color/colorText"
-            android:textSize="20dp" />
+            android:textColor="@color/colorTextWhite"
+            android:textSize="15dp" />
     </LinearLayout>
 
 </LinearLayout>
